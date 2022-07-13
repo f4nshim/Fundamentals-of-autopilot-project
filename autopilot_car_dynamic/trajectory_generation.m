@@ -44,13 +44,12 @@ x_outside = x_base+road_width.*cos(yaw_base+pi/2);
 y_outside = y_base+road_width.*sin(yaw_base+pi/2);
 
 
-figure
+figure(1)
 plot(x_base,y_base)
 hold on
 plot(x_inside,y_inside)
 plot(x_outside,y_outside)
 legend('base','in','out')
-
 
 
 traj(1,:) = x_base;
@@ -62,4 +61,6 @@ traj(6,:) = y_inside;
 traj(7,:) = x_outside;
 traj(8,:) = y_outside;
 
+
 save traj_diy.mat traj 
+

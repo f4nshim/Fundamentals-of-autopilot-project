@@ -13,12 +13,13 @@ figure
 % subplot(2,1,1)
 plot(traj_x,traj_y,'--')
 hold on
+plot(my_traj(1,:),my_traj(2,:))
 plot(out.simout.X.Data, out.simout.Y.Data, 'LineWidth', 1.5)
 plot(traj_inx,traj_iny)
 plot(traj_outx,traj_outy)
 xlabel('traj_x');
 ylabel('traj_y');
-legend('base line','real traj')
+legend('base line','my traj','real traj')
 
 % subplot(2,1,2)
 % plot(traj_x,traj_curv)
